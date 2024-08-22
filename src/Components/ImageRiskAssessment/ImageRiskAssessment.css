@@ -1,0 +1,44 @@
+.widget {
+  background: #f0f4f8;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.progress-stacked {
+  position: relative;
+  height: 30px; /* Adjust height as needed */
+  margin: 20px 0;
+}
+
+.progress {
+  position: relative;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 5px;
+}
+
+.bg-critical {
+  background-color: #dc3545; /* Dark red */
+}
+
+.bg-high {
+  background-color: #dc3545; /* Red */
+}
+
+.bg-moderate {
+  background-color: #fd7e14; /* Orange */
+}
+
+.bg-low {
+  background-color: #ffc107; /* Yellow */
+}
+
+.bg-negligible {
+  background-color: #6c757d; /* Grey */
+}

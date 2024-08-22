@@ -48,7 +48,7 @@ const WidgetSelectionModal = ({ isOpen, onClose, onAddWidget, selectedCategory, 
     return (
         <div className="widget-selection-modal">
             <div className="modal-content">
-                <button className="close-button" onClick={onClose}>×</button>
+                {/* <button className="close-button" onClick={onClose}>×</button> */}
                 <h2>Select Widgets for {selectedCategory}</h2>
                 <div className="tabs">
                     <button
@@ -89,58 +89,3 @@ export default WidgetSelectionModal;
 
 
 
-
-
-// import React, { useState } from 'react';
-// import './WidgetSelectionModal.css';
-
-// const WidgetSelectionModal = ({ isOpen, onClose, onConfirm }) => {
-//     const [selectedWidgets, setSelectedWidgets] = useState({
-//         CloudAccounts: true,
-//         CloudAccountRiskAssessment: true,
-//     });
-
-//     const handleToggle = (widget) => {
-//         setSelectedWidgets((prevState) => ({
-//             ...prevState,
-//             [widget]: !prevState[widget],
-//         }));
-//     };
-
-//     const handleSubmit = () => {
-//         onConfirm(selectedWidgets);
-//         onClose();
-//     };
-
-//     if (!isOpen) return null;
-
-//     return (
-//         <div className="modal-overlay">
-//             <div className="modal-content">
-//                 <button className="close-button" onClick={onClose}>×</button>
-//                 <h2>Select Widgets</h2>
-//                 <div className="widget-list">
-//                     <label>
-//                         <input
-//                             type="checkbox"
-//                             checked={selectedWidgets.CloudAccounts}
-//                             onChange={() => handleToggle('CloudAccounts')}
-//                         />
-//                         Cloud Accounts
-//                     </label>
-//                     <label>
-//                         <input
-//                             type="checkbox"
-//                             checked={selectedWidgets.CloudAccountRiskAssessment}
-//                             onChange={() => handleToggle('CloudAccountRiskAssessment')}
-//                         />
-//                         Cloud Account Risk Assessment
-//                     </label>
-//                 </div>
-//                 <button onClick={handleSubmit}>Confirm</button>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default WidgetSelectionModal;

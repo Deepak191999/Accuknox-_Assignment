@@ -1,57 +1,45 @@
 
+
 .dashboard {
     padding: 20px;
 }
 
-.widgets {
-    display: flex;
-    flex: 1;
-    flex-wrap: wrap;
-    gap: 20px; 
+header {
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-/* .widget-container {
-    flex: 1;
-    min-width: 200px;
-    max-width: 400px;
-} */
-
-/* .add-widget {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 200px;
-    background: #f0f0f0;
-    cursor: pointer;
-    border: 2px dashed #ccc;
-    border-radius: 5px;
-    font-size: 40px;
-} */
-
-/* .add-icon {
-    color: #ccc;
-} */
-
-
-
-.widget-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 5px;
+.main-heading {
+    font-size: 24px;
+    font-weight: bold;
 }
 
-.delete-button {
-    cursor: pointer;
-    color: #f00; /* Red color for the delete button */
-    margin-left: 10px;
-    top: 0px;
+.dashboard-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dashboard-section {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.section-heading {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.widget-row {
+    display: flex;
+    gap: 10px; /* Adjust gap if needed */
 }
 
 .widget-container {
-    position: relative;
-    margin-bottom: 20px;
+    flex: 1; /* Allows widgets to take up equal width */
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 10px;
@@ -62,48 +50,23 @@
     margin-bottom: 10px;
 }
 
-.add-widget .add-icon {
-    font-size: 24px;
-    text-align: center;
-    padding: 40px;
-    background-color: #f0f0f0;
-    border: 2px dashed #ccc;
+.add-widget {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.add-widget .add-icon:hover {
     background-color: #e0e0e0;
-}
-
-
-header {
-    margin-bottom: 20px;
+    border-radius: 8px;
+    padding: 10px;
     text-align: center;
 }
 
-.widgets {
-    margin-top: 20px;
+.add-icon {
+    font-size: 18px;
+    font-weight: bold;
 }
 
-h2 {
-    margin-top: 40px;
-}
-
-.widget-container {
-    margin-bottom: 20px;
-}
-
-.add-widget-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: #FFF;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.add-widget-button:hover {
-    background-color: #0056b3;
+/* Optional: Adjust hover effect if needed */
+.add-widget:hover {
+    background-color: #d0d0d0;
 }

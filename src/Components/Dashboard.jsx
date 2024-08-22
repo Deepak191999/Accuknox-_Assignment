@@ -1,9 +1,12 @@
 //working
 import React, { useState } from 'react';
-import './Dashboard2.css'; // Ensure this path is correct
+import './Dashboard.css'; 
 import CloudAccountsWidget from './CloudAccountsWidget/CloudAccountsWidget';
 import CloudAccountRiskWidget from './CloudAccountRiskWidget/CloudAccountRiskWidget';
 import WidgetSelectionModal from './WidgetSelectionModal/WidgetSelectionModal';
+import SpecificAlert from './SpecificAlert/SpecificAlert';
+import WorkLoadAlert from './WorkLoadAlert/WorkLoadAlert';
+import ImageRiskAssessment from './ImageRiskAssessment/ImageRiskAssessment';
 
 const Dashboard = () => {
     const [widgets, setWidgets] = useState([ { id: 1, name: 'Cloud Accounts', component: <CloudAccountsWidget /> },
@@ -55,10 +58,28 @@ const Dashboard = () => {
                     <h2 className="section-heading">CWPP Dashboard</h2>
                     <div className="widget-row">
                         <div className="widget-container">
-                            <CloudAccountsWidget name="Cloud Accounts" />
+                            {/* <CloudAccountsWidget name="Cloud Accounts" /> */}
+                            <SpecificAlert/>
                         </div>
                         <div className="widget-container">
-                            <CloudAccountRiskWidget name="Cloud Account Risk Assessment" />
+                            {/* <CloudAccountRiskWidget name="Cloud Account Risk Assessment" /> */}
+                            <WorkLoadAlert/>
+                        </div>
+                        <div className="widget-container add-widget" onClick={() => { setSelectedCategory('CWPP'); setIsModalOpen(true); }}>
+                            <div className="add-icon">+ Add Widget</div>
+                        </div>
+                    </div>
+                </div>
+                 <div className="dashboard-section">
+                    <h2 className="section-heading">Regisrty Section</h2>
+                    <div className="widget-row">
+                        <div className="widget-container">
+                            {/* <CloudAccountsWidget name="Cloud Accounts" /> */}
+                            <ImageRiskAssessment/>
+                        </div>
+                        <div className="widget-container">
+                            {/* <CloudAccountRiskWidget name="Cloud Account Risk Assessment" /> */}
+                            <WorkLoadAlert/>
                         </div>
                         <div className="widget-container add-widget" onClick={() => { setSelectedCategory('CWPP'); setIsModalOpen(true); }}>
                             <div className="add-icon">+ Add Widget</div>

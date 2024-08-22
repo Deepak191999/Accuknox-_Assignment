@@ -1,27 +1,28 @@
 
 
-import React from 'react';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import '../SpecificAlert/SpecificAlert.css'
 
-const ImageRiskAssessment = () => {
+import React from 'react';
+
+const ImageSecurityIssue = () => {
   return (
     <div className="widget">
-      <h3>Image Risk Assessment</h3>
+      <h3>Image Security Issues</h3>
       
       <div className="container">
         <div className="progress">
-        
-          <div className="progress-bar" role="progressbar" style={{ width: '6%', backgroundColor: '#f01515' }}>
+          <div className="progress-bar" role="progressbar" style={{ width: '20%', backgroundColor: '#8B0000' }}>
+         
+          </div>
+          <div className="progress-bar" role="progressbar" style={{ width: '20%', backgroundColor: '#f01515' }}>
             
           </div>
-          <div className="progress-bar" role="progressbar" style={{ width: '72%', backgroundColor: '#ff9c32' }}>
+          <div className="progress-bar" role="progressbar" style={{ width: '20%', backgroundColor: '#ff9c32' }}>
             
           </div>
-          <div className="progress-bar" role="progressbar" style={{ width: '17.5%', backgroundColor: '#fff820' }}>
+          <div className="progress-bar" role="progressbar" style={{ width: '20%', backgroundColor: '#fff820' }}>
             
           </div>
-          <div className="progress-bar" role="progressbar" style={{ width: '3%', backgroundColor: '#d3d3d3' }}>
+          <div className="progress-bar" role="progressbar" style={{ width: '20%', backgroundColor: '#d3d3d3' }}>
             
           </div>
         </div>
@@ -29,21 +30,24 @@ const ImageRiskAssessment = () => {
        
 <div className="legend" style={{ display: 'flex',flexWrap:'wrap', justifyContent: 'space-between', marginTop: '10px' }}>
           <div className="legend-item" style={{ display: 'flex', alignItems: 'center' }}>
+            <div style={{ width: '15px', height: '15px', backgroundColor: '#8B0000', marginRight: '5px' }}></div>
+            Critical (2)
+          </div>
+          <div className="legend-item" style={{ display: 'flex', alignItems: 'center' }}>
             <div style={{ width: '15px', height: '15px', backgroundColor: '#f01515', marginRight: '5px' }}></div>
-            Critical (9)
+            High (2)
           </div>
           <div className="legend-item" style={{ display: 'flex', alignItems: 'center' }}>
             <div style={{ width: '15px', height: '15px', backgroundColor: '#ff9c32', marginRight: '5px' }}></div>
-            High (150)
+            Moderate (2)
           </div>
           <div className="legend-item" style={{ display: 'flex', alignItems: 'center' }}>
             <div style={{ width: '15px', height: '15px', backgroundColor: '#fff820', marginRight: '5px' }}></div>
-            Moderate (35)
+            Low (2)
           </div>
-          
           <div className="legend-item" style={{ display: 'flex', alignItems: 'center' }}>
             <div style={{ width: '15px', height: '15px', backgroundColor: '#d3d3d3', marginRight: '5px' }}></div>
-            None (4)
+            None (2)
           </div>
         </div>
       </div>
@@ -51,4 +55,4 @@ const ImageRiskAssessment = () => {
   );
 }
 
-export default ImageRiskAssessment;
+export default ImageSecurityIssue;

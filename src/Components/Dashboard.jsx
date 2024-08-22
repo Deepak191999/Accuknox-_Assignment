@@ -7,6 +7,7 @@ import WidgetSelectionModal from './WidgetSelectionModal/WidgetSelectionModal';
 import SpecificAlert from './SpecificAlert/SpecificAlert';
 import WorkLoadAlert from './WorkLoadAlert/WorkLoadAlert';
 import ImageRiskAssessment from './ImageRiskAssessment/ImageRiskAssessment';
+import ImageSecurityIssue from './ImageSecurityIssue/ImageSecurityIssue';
 
 const Dashboard = () => {
     const [widgets, setWidgets] = useState([ { id: 1, name: 'Cloud Accounts', component: <CloudAccountsWidget /> },
@@ -79,7 +80,7 @@ const Dashboard = () => {
                         </div>
                         <div className="widget-container">
                             {/* <CloudAccountRiskWidget name="Cloud Account Risk Assessment" /> */}
-                            <WorkLoadAlert/>
+                           <ImageSecurityIssue/>
                         </div>
                         <div className="widget-container add-widget" onClick={() => { setSelectedCategory('CWPP'); setIsModalOpen(true); }}>
                             <div className="add-icon">+ Add Widget</div>

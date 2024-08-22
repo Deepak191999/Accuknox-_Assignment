@@ -11,8 +11,12 @@ const WidgetSelectionModal = ({ isOpen, onClose, onAddWidget, selectedCategory, 
             { id: 2, name: 'Cloud Account Risk Assessment' },
         ],
         CWPP: [
-            { id: 1, name: 'Cloud Accounts' },
-            { id: 2, name: 'Cloud Account Risk Assessment' },
+            { id: 1, name: 'Specific alert' },
+            { id: 2, name: 'Workload alert' },
+        ],
+        Registry: [
+            { id: 1, name: 'Image Risk' },
+            { id: 2, name: 'Image Security' },
         ],
     };
 
@@ -62,6 +66,12 @@ const WidgetSelectionModal = ({ isOpen, onClose, onAddWidget, selectedCategory, 
                         onClick={() => setSelectedCategory('CWPP')}
                     >
                         CWPP
+                    </button>
+                    <button
+                        className={`tab ${selectedCategory === 'Registry' ? 'active' : ''}`}
+                        onClick={() => setSelectedCategory('Registry')}
+                    >
+                        Registry
                     </button>
                 </div>
                 <div className="widget-list">

@@ -72,7 +72,7 @@ const Dashboard = () => {
                     </div>
                 </div>
                  <div className="dashboard-section">
-                    <h2 className="section-heading">Regisrty Section</h2>
+                    <h2 className="section-heading">Regisrty Scan</h2>
                     <div className="widget-row">
                         <div className="widget-container">
                             {/* <CloudAccountsWidget name="Cloud Accounts" /> */}
@@ -108,41 +108,3 @@ export default Dashboard;
 
 
 
-
-// import React, { useState } from 'react';
-// import WidgetSelectionModal from './WidgetSelectionModal';
-// import CloudAccountsWidget from './CloudAccountsWidget';
-// import CloudAccountRiskWidget from './CloudAccountRiskWidget';
-
-// const Dashboard = () => {
-//     const [widgets, setWidgets] = useState({
-//         CloudAccounts: true,
-//         CloudAccountRiskAssessment: true,
-//     });
-//     const [isModalOpen, setIsModalOpen] = useState(false);
-
-//     const handleAddWidget = () => {
-//         setIsModalOpen(true);
-//     };
-
-//     const handleConfirmSelection = (selectedWidgets) => {
-//         setWidgets(selectedWidgets);
-//     };
-
-//     return (
-//         <div className="dashboard">
-//             <button onClick={handleAddWidget}>+ Add Widget</button>
-//             <div className="widgets">
-//                 {widgets.CloudAccounts && <CloudAccountsWidget />}
-//                 {widgets.CloudAccountRiskAssessment && <CloudAccountRiskWidget />}
-//             </div>
-//             <WidgetSelectionModal
-//                 isOpen={isModalOpen}
-//                 onClose={() => setIsModalOpen(false)}
-//                 onConfirm={handleConfirmSelection}
-//             />
-//         </div>
-//     );
-// };
-
-// export default Dashboard;

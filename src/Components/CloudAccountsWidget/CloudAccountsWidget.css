@@ -1,0 +1,147 @@
+.dashboard {
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+.chart-container {
+    width: 200px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+}
+.widgets {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+.circle-chart, .pie-chart {
+    margin: 20px 0;
+}
+
+
+.status span {
+    display: block;
+    margin: 5px 0;
+}
+
+
+
+
+
+.failed {
+    color: red;
+}
+
+.warning {
+    color: orange;
+}
+
+.not-available {
+    color: gray;
+}
+
+.passed {
+    color: green;
+}
+
+
+
+
+
+.connected, .not-connected, .failed, .warning, .not-available, .passed {
+    color: #333;
+}
+
+/* 
+.widget {
+    background: #f0f4f8;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: center; */
+/* } */ 
+
+.widget {
+    position: relative;
+    background: #f0f4f8;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.delete-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.status {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 14px;
+}
+
+.connected {
+    color: #36A2EB; /* Blue */
+    text-align: left;
+    flex: 1;
+}
+
+.not-connected {
+    color: #c1bdbd; /* Grey */
+    text-align: right;
+    flex: 1;
+}
+
+
+
+.widget {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.widget-content {
+    display: flex;
+    align-items: center;
+    /* margin-top: 20px; */
+
+}
+
+.chart-container {
+    width: 200px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+}
+
+.custom-legend {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+}

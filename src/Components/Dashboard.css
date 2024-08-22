@@ -1,0 +1,76 @@
+
+.dashboard {
+    padding: 20px;
+}
+
+.widgets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* .widget-container {
+    flex: 1;
+    min-width: 200px;
+    max-width: 400px;
+} */
+
+/* .add-widget {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    background: #f0f0f0;
+    cursor: pointer;
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    font-size: 40px;
+} */
+
+/* .add-icon {
+    color: #ccc;
+} */
+
+
+
+.widget-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.delete-button {
+    cursor: pointer;
+    color: #f00; /* Red color for the delete button */
+    margin-left: 10px;
+    top: 0px;
+}
+
+.widget-container {
+    position: relative;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background: #f9f9f9;
+}
+
+.widget-container .widget-header {
+    margin-bottom: 10px;
+}
+
+.add-widget .add-icon {
+    font-size: 24px;
+    text-align: center;
+    padding: 40px;
+    background-color: #f0f0f0;
+    border: 2px dashed #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-widget .add-icon:hover {
+    background-color: #e0e0e0;
+}

@@ -1,124 +1,72 @@
+
+
 .dashboard {
     padding: 20px;
 }
 
 header {
     margin-bottom: 20px;
+    text-align: center;
 }
-.chart-container {
-    width: 200px; /* Adjust width as needed */
-    height: 200px; /* Adjust height as needed */
+
+.main-heading {
+    font-size: 24px;
+    font-weight: bold;
 }
-.widgets {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+.dashboard-sections {
+    display: flex;
+    flex-direction: column;
     gap: 20px;
 }
 
-
-.circle-chart, .pie-chart {
-    margin: 20px 0;
-}
-
-
-.status span {
-    display: block;
-    margin: 5px 0;
-}
-
-
-
-
-
-.failed {
-    color: red;
-}
-
-.warning {
-    color: orange;
-}
-
-.not-available {
-    color: gray;
-}
-
-.passed {
-    color: green;
-}
-
-
-
-
-
-.connected, .not-connected, .failed, .warning, .not-available, .passed {
-    color: #333;
-}
-
-
-.widget {
-    background: #f0f4f8;
+.dashboard-section {
+    border: 1px solid #ddd;
+    padding: 15px;
     border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    display: flex;
-    /* flex-direction: column; */
-    align-items: center;
+    background: #f9f9f9;
 }
 
-.status {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    font-size: 14px;
-}
-
-.connected {
-    color: #36A2EB; /* Blue */
-    text-align: left;
-    flex: 1;
-}
-
-.not-connected {
-    color: #c1bdbd; /* Grey */
-    text-align: right;
-    flex: 1;
-}
-
-
-
-.widget {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.widget-content {
-    display: flex;
-    align-items: center;
-}
-
-.chart-container {
-    width: 200px; /* Adjust width as needed */
-    height: 200px; /* Adjust height as needed */
-}
-
-.custom-legend {
-    margin-left: 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-.legend-item {
-    display: flex;
-    align-items: center;
+.section-heading {
+    font-size: 20px;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
-.legend-color {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    margin-right: 10px;
+.widget-row {
+    display: flex;
+    gap: 10px; /* Adjust gap if needed */
+}
+
+.widget-container {
+    flex: 1; /* Allows widgets to take up equal width */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background: #f9f9f9;
+}
+
+.widget-container .widget-header {
+    margin-bottom: 10px;
+}
+
+.add-widget {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+}
+
+.add-icon {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Optional: Adjust hover effect if needed */
+.add-widget:hover {
+    background-color: #d0d0d0;
 }

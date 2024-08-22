@@ -5,8 +5,9 @@
 
 .widgets {
     display: flex;
+    flex: 1;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 20px; 
 }
 
 /* .widget-container {
@@ -73,4 +74,36 @@
 
 .add-widget .add-icon:hover {
     background-color: #e0e0e0;
+}
+
+
+header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.widgets {
+    margin-top: 20px;
+}
+
+h2 {
+    margin-top: 40px;
+}
+
+.widget-container {
+    margin-bottom: 20px;
+}
+
+.add-widget-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-widget-button:hover {
+    background-color: #0056b3;
 }

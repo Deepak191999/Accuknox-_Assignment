@@ -32,7 +32,7 @@ const CloudAccountsWidget = ({name, onDelete}) => {
 
     return (
         <div className="widget">
-             <button className="delete-button" onClick={onDelete}>✕</button>
+             {/* <button className="delete-button" onClick={onDelete}>✕</button> */}
             <h3> {name}  </h3>
             {/* <h3> {name}  Cloud Accounts</h3> */}
             <div className="widget-content">

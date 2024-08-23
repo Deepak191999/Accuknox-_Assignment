@@ -8,7 +8,6 @@ import WorkLoadAlert from './WorkLoadAlert/WorkLoadAlert';
 import ImageRiskAssessment from './ImageRiskAssessment/ImageRiskAssessment';
 import ImageSecurityIssue from './ImageSecurityIssue/ImageSecurityIssue';
 
-
 const Dashboard = () => {
     const [activeWidgets, setActiveWidgets] = useState({
         CSPM: [
@@ -46,6 +45,11 @@ const Dashboard = () => {
         }
     }, [searchQuery, activeWidgets]);
 
+    useEffect(() => {
+        // Reset modalWidgets when category changes
+        setModalWidgets(activeWidgets[selectedCategory] || []);
+    }, [selectedCategory, activeWidgets]);
+
     const toggleModal = () => {
         setIsModalOpen(!isModalOpen);
     };
@@ -58,7 +62,6 @@ const Dashboard = () => {
             const categoryWidgets = updatedWidgets[selectedCategory] || [];
             const currentWidgetIds = new Set(categoryWidgets.map(widget => widget.id));
 
-           
             const widgetsToAdd = selectedWidgets.filter(widget => !currentWidgetIds.has(widget.id));
             const widgetsToRemove = categoryWidgets.filter(widget => !selectedWidgets.some(selected => selected.id === widget.id));
 
@@ -70,6 +73,9 @@ const Dashboard = () => {
 
             return updatedWidgets;
         });
+
+        // Reset modalWidgets to reflect the new activeWidgets in the selected category
+        setModalWidgets(activeWidgets[selectedCategory] || []);
     };
 
     const renderWidgets = (category) => {
@@ -78,7 +84,7 @@ const Dashboard = () => {
             <div key={widget.id} className="widget-container">
                 {widget.component}
             </div>
-        )) : <div>No widgets available</div>; // Ensure there's a fallback if no widgets
+        )) : <div>No widgets available</div>;
     };
 
     return (
@@ -98,7 +104,7 @@ const Dashboard = () => {
                     <h2 className="section-heading">CSPM Dashboard</h2>
                     <div className="widget-row">
                         {renderWidgets('CSPM')}
-                        <div className="widget-container add-widget" onClick={() => { setSelectedCategory('CSPM'); setModalWidgets(activeWidgets['CSPM']); toggleModal(); }}>
+                        <div className="widget-container add-widget" onClick={() => { setSelectedCategory('CSPM'); toggleModal(); }}>
                             <div className="add-icon">+ Add Widget</div>
                         </div>
                     </div>
@@ -107,7 +113,7 @@ const Dashboard = () => {
                     <h2 className="section-heading">CWPP Dashboard</h2>
                     <div className="widget-row">
                         {renderWidgets('CWPP')}
-                        <div className="widget-container add-widget" onClick={() => { setSelectedCategory('CWPP'); setModalWidgets(activeWidgets['CWPP']); toggleModal(); }}>
+                        <div className="widget-container add-widget" onClick={() => { setSelectedCategory('CWPP'); toggleModal(); }}>
                             <div className="add-icon">+ Add Widget</div>
                         </div>
                     </div>
@@ -116,7 +122,7 @@ const Dashboard = () => {
                     <h2 className="section-heading">Registry Scan</h2>
                     <div className="widget-row">
                         {renderWidgets('Registry Scan')}
-                        <div className="widget-container add-widget" onClick={() => { setSelectedCategory('Registry Scan'); setModalWidgets(activeWidgets['Registry Scan']); toggleModal(); }}>
+                        <div className="widget-container add-widget" onClick={() => { setSelectedCategory('Registry Scan'); toggleModal(); }}>
                             <div className="add-icon">+ Add Widget</div>
                         </div>
                     </div>
@@ -127,12 +133,11 @@ const Dashboard = () => {
                 onClose={toggleModal}
                 onAddWidget={handleAddWidget}
                 selectedCategory={selectedCategory}
-                modalWidgets={modalWidgets}
+                setSelectedCategory={setSelectedCategory}
+                activeWidgets={activeWidgets} // Pass activeWidgets to the modal
             />
         </div>
     );
 };
 
 export default Dashboard;
-
-

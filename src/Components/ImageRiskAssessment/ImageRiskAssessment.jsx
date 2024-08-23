@@ -21,7 +21,7 @@ const ImageRiskAssessment = () => {
           <div className="progress-bar" role="progressbar" style={{ width: '17.5%', backgroundColor: '#fff820' }}>
             
           </div>
-          <div className="progress-bar" role="progressbar" style={{ width: '3%', backgroundColor: '#d3d3d3' }}>
+          <div className="progress-bar" role="progressbar" style={{ width: '4.5%', backgroundColor: '#d3d3d3' }}>
             
           </div>
         </div>

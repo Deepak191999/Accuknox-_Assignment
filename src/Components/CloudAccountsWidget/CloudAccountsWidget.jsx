@@ -7,7 +7,7 @@ import 'chart.js/auto';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 
-const CloudAccountsWidget = ({name, onDelete}) => {
+const CloudAccountsWidget = ({name}) => {
     const data = {
         labels: ['Not Connected', 'Connected'],
         datasets: [{
@@ -33,8 +33,8 @@ const CloudAccountsWidget = ({name, onDelete}) => {
     return (
         <div className="widget">
              {/* <button className="delete-button" onClick={onDelete}>✕</button> */}
-            <h3> {name}  </h3>
-            {/* <h3> {name}  Cloud Accounts</h3> */}
+            {/* <h3> {name}  </h3> */}
+            <h3>  Cloud Accounts</h3>
             <div className="widget-content">
                 <div className="chart-container">
                     <Doughnut data={data} options={options} />

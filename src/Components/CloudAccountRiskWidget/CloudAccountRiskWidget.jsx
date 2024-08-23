@@ -25,7 +25,7 @@ const CloudAccountRiskWidget = () => {
             },
             
         },
-        maintainAspectRatio: false, // Allows the chart to be responsive and adjust its size
+        maintainAspectRatio: false, 
     };
 
     return (

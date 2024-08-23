@@ -6,8 +6,8 @@ header {
     margin-bottom: 20px;
 }
 .chart-container {
-    width: 200px; /* Adjust width as needed */
-    height: 200px; /* Adjust height as needed */
+    width: 200px; 
+    height: 200px; 
 }
 .widgets {
     display: grid;
@@ -26,10 +26,6 @@ header {
     margin: 5px 0;
 }
 
-
-
-
-
 .failed {
     color: red;
 }
@@ -45,8 +41,6 @@ header {
 .passed {
     color: green;
 }
-
-
 
 
 
@@ -100,8 +94,8 @@ header {
 }
 
 .chart-container {
-    width: 200px; /* Adjust width as needed */
-    height: 200px; /* Adjust height as needed */
+    width: 200px; 
+    height: 200px; 
 }
 
 .custom-legend {

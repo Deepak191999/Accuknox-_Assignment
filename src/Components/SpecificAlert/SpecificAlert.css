@@ -6,8 +6,8 @@ header {
     margin-bottom: 20px;
 }
 .chart-container {
-    width: 200px; /* Adjust width as needed */
-    height: 200px; /* Adjust height as needed */
+    width: 200px; 
+    height: 200px;
 }
 .widgets {
     display: grid;
@@ -100,8 +100,8 @@ header {
 }
 
 .chart-container {
-    width: 200px; /* Adjust width as needed */
-    height: 200px; /* Adjust height as needed */
+    width: 200px;
+    height: 200px; 
 }
 
 .custom-legend {

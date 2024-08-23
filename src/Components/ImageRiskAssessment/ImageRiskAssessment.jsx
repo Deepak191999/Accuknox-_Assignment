@@ -1,8 +1,5 @@
-
-
 import React from 'react';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import '../SpecificAlert/SpecificAlert.css'
+
 
 const ImageRiskAssessment = () => {
   return (

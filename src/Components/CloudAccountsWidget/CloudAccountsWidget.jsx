@@ -27,7 +27,7 @@ const CloudAccountsWidget = ({name = 'Cloud Accounts'}) => {
                     },
                    
                 },
-                maintainAspectRatio: false, // Prevents distortion of the chart
+                maintainAspectRatio: false, 
             };
 
     return (

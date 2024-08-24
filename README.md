@@ -31,3 +31,48 @@ The project will start on http://localhost:3000.
 ## Notes  
 
 Make sure you have Node.js installed on your machine.
+
+
+
+## Description  
+This project implements a dynamic dashboard where users can manage widgets within categories. The dashboard is built using JSON to define categories and widgets, allowing users to add, remove, and customize widgets dynamically.  
+
+## Features  
+
+1 Dynamic Widget Management:
+
+Users can add and remove widgets from categories.  
+
+Each category can contain multiple widgets.  
+
+Random text is used for widgets as placeholders.  
+
+2 Add Widget:  
+
+Users can click "+ Add Widget" to enter a widget name and text.  
+The new widget is added to the selected category.  
+
+3 Category Management:  
+
+Users can manage categories by adding and unchecking widgets from the category list.  
+
+Search Functionality:  
+
+Users can search through a list of all available widgets.  
+
+# How to Use  
+
+1 Adding Widgets:  
+
+Click on "+ Add Widget."  
+
+Select the category to which the widget should be added.  
+
+
+2 Managing Categories:  
+
+Navigate to the category management section to uncheck widgets.  
+
+3 Searching Widgets:  
+
+Use the search bar to filter and find specific widgets in the list.  

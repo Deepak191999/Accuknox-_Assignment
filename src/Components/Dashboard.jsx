@@ -26,7 +26,7 @@ const Dashboard = () => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedCategory, setSelectedCategory] = useState('CSPM');
-    const [modalWidgets, setModalWidgets] = useState([]);
+    // const [modalWidgets, setModalWidgets] = useState([]);
     const [searchQuery, setSearchQuery] = useState(''); 
     const [filteredWidgets, setFilteredWidgets] = useState(activeWidgets); 
 
@@ -45,10 +45,10 @@ const Dashboard = () => {
         }
     }, [searchQuery, activeWidgets]);
 
-    useEffect(() => {
-        // Reset modalWidgets when category changes
-        setModalWidgets(activeWidgets[selectedCategory] || []);
-    }, [selectedCategory, activeWidgets]);
+    // useEffect(() => {
+    //     // Reset modalWidgets when category changes
+    //     setModalWidgets(activeWidgets[selectedCategory] || []);
+    // }, [selectedCategory, activeWidgets]);
 
     const toggleModal = () => {
         setIsModalOpen(!isModalOpen);
@@ -75,7 +75,7 @@ const Dashboard = () => {
         });
 
         // Reset modalWidgets to reflect the new activeWidgets in the selected category
-        setModalWidgets(activeWidgets[selectedCategory] || []);
+        // setModalWidgets(activeWidgets[selectedCategory] || []);
     };
 
     const renderWidgets = (category) => {

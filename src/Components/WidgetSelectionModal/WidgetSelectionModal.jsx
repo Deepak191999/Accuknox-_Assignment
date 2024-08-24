@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import './WidgetSelectionModal.css'; 
 import CloudAccountsWidget from '../CloudAccountsWidget/CloudAccountsWidget';
 import CloudAccountRiskWidget from '../CloudAccountRiskWidget/CloudAccountRiskWidget';
@@ -8,7 +8,7 @@ import ImageRiskAssessment from '../ImageRiskAssessment/ImageRiskAssessment';
 import ImageSecurityIssue from '../ImageSecurityIssue/ImageSecurityIssue';
 
 const WidgetSelectionModal = ({ isOpen, onClose, onAddWidget, selectedCategory, setSelectedCategory, activeWidgets }) => {
-    const allWidgets = {
+    const allWidgets =  useMemo(() => ({
         CSPM: [
             { id: 1, name: 'Cloud Accounts', component: <CloudAccountsWidget /> },
             { id: 2, name: 'Cloud Account Risk Assessment', component: <CloudAccountRiskWidget /> },
@@ -21,7 +21,7 @@ const WidgetSelectionModal = ({ isOpen, onClose, onAddWidget, selectedCategory, 
             { id: 5, name: 'Image Risk Assessment', component: <ImageRiskAssessment /> },
             { id: 6, name: 'Image Security Issues', component: <ImageSecurityIssue /> },
         ],
-    };
+    }), []); 
 
     const [selectedWidgets, setSelectedWidgets] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
@@ -37,7 +37,7 @@ const WidgetSelectionModal = ({ isOpen, onClose, onAddWidget, selectedCategory, 
                 currentWidgetIds.has(widget.id) ? widget.id : null
             ).filter(id => id !== null));
         }
-    }, [activeWidgets, selectedCategory]);
+    }, [activeWidgets, selectedCategory,allWidgets]);
 
     useEffect(() => {
         if (searchQuery) {
@@ -47,7 +47,7 @@ const WidgetSelectionModal = ({ isOpen, onClose, onAddWidget, selectedCategory, 
         } else {
             setFilteredWidgets(allWidgets[selectedCategory]);
         }
-    }, [searchQuery, selectedCategory]);
+    }, [searchQuery, selectedCategory,allWidgets]);
 
     const handleSearchChange = (event) => {
         setSearchQuery(event.target.value);
